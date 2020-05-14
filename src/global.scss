@@ -24,3 +24,18 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.toolbar-background-md {
+    background-color: #63BF52;
+}
+
+@font-face {
+    font-family: MerieOne;
+    src: url('./assets/fonts/meriendaone.woff2') format('woff2');
+}
+
+
+*{
+    font-family: MerieOne;
+}
