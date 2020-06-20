@@ -4,7 +4,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>
-      recherche
+      information
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,8 +12,9 @@
 
 <ion-content padding>
 
-      <div *ngFor="let game of recherche.teams" (click)="nextPage(game.id)">
-           <img src="{{ game.crestUrl}}"/> 
-           <p>  {{ game.name}} </p>
-  </div>
+<h1>Membres de l'équipe</h1>
+   <p *ngFor="let games of info.squad">
+
+    {{games.name}} - {{games.role}}
+  </p>
 </ion-content>

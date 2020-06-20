@@ -1,0 +1,29 @@
+ion-content{
+ --background: none;
+    background-image: url(../../assets/images/splashscreen.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    display:block;
+    vertical-align: middle;
+}
+ion-header{
+background-color: cornflowerblue;
+}
+h1{
+  --background: none;
+  justify-content: center;
+  text-align: center;
+  display:block;
+  vertical-align: middle;
+  margin-top: 70vh;
+}
+ion-button{
+  display: block;
+  margin-top: 3vh;
+}
+.toolbar-background{
+  background-color: cornflowerblue;
+}

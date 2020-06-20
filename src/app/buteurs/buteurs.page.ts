@@ -1,39 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Resultats } from '../../models/modelsresultatsmatches';
+import { Buteurs } from '../../models/modelsbuteurs';
 import { FootserviceService } from '../service/footservice.service';
 
 @Component({
-  selector: 'app-resultats',
-  templateUrl: './resultats.page.html',
-  styleUrls: ['./resultats.page.scss'],
+  selector: 'app-buteurs',
+  templateUrl: './buteurs.page.html',
+  styleUrls: ['./buteurs.page.scss'],
 })
-export class ResultatsPage implements OnInit {
+export class ButeursPage implements OnInit {
 
-gamesPL: Resultats = new Resultats();
-gamesPD: Resultats = new Resultats();
-gamesSA: Resultats = new Resultats();
-gamesBL1: Resultats = new Resultats();
-gamesFL1: Resultats = new Resultats();
+gamesPL: Buteurs = new Buteurs();
+gamesPD: Buteurs = new Buteurs();
+gamesSA: Buteurs = new Buteurs();
+gamesBL1: Buteurs = new Buteurs();
+gamesFL1: Buteurs = new Buteurs();
 
-  constructor(private footserviceService: FootserviceService) { 
-    }
+  constructor(private footserviceService: FootserviceService) { }
 
   ngOnInit() {
 
-  this.ListMatches("PL");
-  this.ListMatches("PD");
-  this.ListMatches("SA");
-  this.ListMatches("BL1");
-  this.ListMatches("FL1");
+  this.ListButeurs("PL");
+  this.ListButeurs("PD");
+  this.ListButeurs("SA");
+  this.ListButeurs("BL1");
+  this.ListButeurs("FL1");
   }
   //Listes de matches
-ListMatches(comp: string) {
-    console.log('ionViewDidLoad ListMatchesPage');
+ListButeurs(comp: string) {
+    console.log('ionViewDidLoad ListButeursPage');
 
    switch(comp) { 
    case "PL": { 
-      this.footserviceService.getMatches(comp).then((rep) => {
+      this.footserviceService.getButeurs(comp).then((rep) => {
       console.log(`rep ${JSON.stringify(rep)}`);
       this.gamesPL=rep;
       console.log(this.gamesPL);
@@ -46,7 +45,7 @@ ListMatches(comp: string) {
    }
 
    case "PD": { 
-      this.footserviceService.getMatches(comp).then((rep) => {
+      this.footserviceService.getButeurs(comp).then((rep) => {
       console.log(`rep ${JSON.stringify(rep)}`);
       this.gamesPD=rep;
       console.log(this.gamesPD);
@@ -59,7 +58,7 @@ ListMatches(comp: string) {
    } 
 
    case "SA": { 
-      this.footserviceService.getMatches(comp).then((rep) => {
+      this.footserviceService.getButeurs(comp).then((rep) => {
       console.log(`rep ${JSON.stringify(rep)}`);
       this.gamesSA=rep;
       console.log(this.gamesSA);
@@ -72,7 +71,7 @@ ListMatches(comp: string) {
    }
 
    case "BL1": { 
-      this.footserviceService.getMatches(comp).then((rep) => {
+      this.footserviceService.getButeurs(comp).then((rep) => {
       console.log(`rep ${JSON.stringify(rep)}`);
       this.gamesBL1=rep;
       console.log(this.gamesBL1);
@@ -85,7 +84,7 @@ ListMatches(comp: string) {
    }
 
    default: { 
-      this.footserviceService.getMatches(comp).then((rep) => {
+      this.footserviceService.getButeurs(comp).then((rep) => {
       console.log(`rep ${JSON.stringify(rep)}`);
       this.gamesFL1=rep;
       console.log(this.gamesFL1);
@@ -98,6 +97,7 @@ ListMatches(comp: string) {
    } 
 }
 }
-} 
+
+}
 
 

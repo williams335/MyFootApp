@@ -74,4 +74,49 @@ const url1= "https://free-football-soccer-videos.p.rapidapi.com";
 
   }
 
+  //Récupération des recherches
+  getRecherche(): Promise<any>{
+  
+const url= "https://api.football-data.org/v2/teams/";
+
+    const httpOptions = {headers: new HttpHeaders().set("X-Auth-Token", "45c7f8afedda475190873423e4ae4045")};
+
+  
+        return new Promise(resolve => {
+
+          this.http.get(url, httpOptions).subscribe(data => {
+            resolve(data);
+            console.log(data);
+          }, err => {
+            console.log(err);
+          });
+        });
+
+
+
+  }
+
+
+//Récupération des informations de recherche
+  getInfo(id: number): Promise<any>{
+  
+const url= "https://api.football-data.org/v2/teams/"+id;
+
+    const httpOptions = {headers: new HttpHeaders().set("X-Auth-Token", "45c7f8afedda475190873423e4ae4045")};
+
+  
+        return new Promise(resolve => {
+
+          this.http.get(url, httpOptions).subscribe(data => {
+            resolve(data);
+            console.log(data);
+          }, err => {
+            console.log(err);
+          });
+        });
+
+
+
+  }
+
 }

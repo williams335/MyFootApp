@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      meilleurs buteurs
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>
+        Premier League
+  </h1>
+      <p *ngFor="let game of gamesPL.scorers">
+        {{ game.player.name}}- {{ game.team.name}}- {{ game.numberOfGoals}}.
+    </p>
+      <h1>
+        Ligue 1
+  </h1>
+      <p *ngFor="let game of gamesFL1.scorers">
+         {{ game.player.name}}- {{ game.team.name}}- {{ game.numberOfGoals}}.
+      </p>
+      <h1>
+        Bundesliga
+  </h1>
+      <p *ngFor="let game of gamesBL1.scorers">
+          {{ game.player.name}}- {{ game.team.name}}- {{ game.numberOfGoals}}.
+      </p>
+
+      <h1>
+       Liga
+  </h1>
+      <p *ngFor="let game of gamesPD.scorers">
+          {{ game.player.name}}- {{ game.team.name}}- {{ game.numberOfGoals}}.
+      </p>
+
+      <h1>
+       Serie A
+  </h1>
+      <p *ngFor="let game of gamesSA.scorers">
+          {{ game.player.name}}- {{ game.team.name}}- {{ game.numberOfGoals}}.
+      </p>  
+</ion-content>
+

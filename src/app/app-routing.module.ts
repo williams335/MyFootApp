@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'bienvenue',
+    path: 'bienvenue/:nom',
     loadChildren: () => import('./bienvenue/bienvenue.module').then( m => m.BienvenuePageModule)
   },
   {
@@ -24,8 +24,16 @@ const routes: Routes = [
     loadChildren: () => import('./recherche/recherche.module').then( m => m.RecherchePageModule)
   },
   {
-    path: 'videos',
-    loadChildren: () => import('./videos/videos.module').then( m => m.VideosPageModule)
+    path: 'acceuil',
+    loadChildren: () => import('./acceuil/acceuil.module').then( m => m.AcceuilPageModule)
+  },
+  {
+    path: 'buteurs',
+    loadChildren: () => import('./buteurs/buteurs.module').then( m => m.ButeursPageModule)
+  },
+  {
+    path: 'info/:id',
+    loadChildren: () => import('./info/info.module').then( m => m.InfoPageModule)
   },
 ];
 

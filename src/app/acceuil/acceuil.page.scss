@@ -1,6 +1,6 @@
 ion-content{
  --background: none;
-    background-image: url(../../assets/images/background2.png);
+    background-image: url(../../assets/images/background1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -8,22 +8,13 @@ ion-content{
     text-align: center;
     display:block;
     vertical-align: middle;
-    color:#0e0e0e;
 }
 ion-header{
 background-color: cornflowerblue;
-}
+
 ion-title{
   color:white;
 }
-ion-card-content {
---background: transparent;
-    display: block;
-    position: relative;
-    color: white;
-}
-img{
-  width: 35vw;
 }
 h1{
   --background: none;
@@ -31,12 +22,13 @@ h1{
   text-align: center;
   display:block;
   vertical-align: middle;
+  margin-top: 25vh;
   color: white;
 }
 
 #bouton{
   display: block;
-  margin-top: 35vh;
+  margin-top: 5vh;
 }
 ion-button{
   display: block;

@@ -1,9 +1,48 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>resultats</ion-title>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      resultats
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content padding>
+
+  <h1>
+        Premier League
+  </h1>
+      <p *ngFor="let game of gamesPL.matches">
+        {{ game.awayTeam.name}} {{ game.score.fullTime.awayTeam}}- {{ game.score.fullTime.homeTeam}} {{ game.homeTeam.name}}.
+    </p>
+      <h1>
+        Ligue 1
+  </h1>
+      <p *ngFor="let game of gamesFL1.matches">
+          {{ game.awayTeam.name}} {{ game.score.fullTime.awayTeam}}- {{ game.score.fullTime.homeTeam}} {{ game.homeTeam.name}}.
+      </p>
+      <h1>
+        Bundesliga
+  </h1>
+      <p *ngFor="let game of gamesBL1.matches">
+          {{ game.awayTeam.name}} {{ game.score.fullTime.awayTeam}}- {{ game.score.fullTime.homeTeam}} {{ game.homeTeam.name}}.
+      </p>
+
+      <h1>
+       Liga
+  </h1>
+      <p *ngFor="let game of gamesPD.matches">
+          {{ game.awayTeam.name}} {{ game.score.fullTime.awayTeam}}- {{ game.score.fullTime.homeTeam}} {{ game.homeTeam.name}}.
+      </p>
+
+      <h1>
+       Serie A
+  </h1>
+      <p *ngFor="let game of gamesSA.matches">
+          {{ game.awayTeam.name}} {{ game.score.fullTime.awayTeam}}- {{ game.score.fullTime.homeTeam}} {{ game.homeTeam.name}}.
+      </p>  
 </ion-content>
+
