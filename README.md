@@ -1,4 +1,4 @@
 # MyFootApp
 TP développement d'application mobile
 
-"ionic serve" pour lancer l'aplication
+"npm install" puis "ionic serve" pour lancer l'aplication
